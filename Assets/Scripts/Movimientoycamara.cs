@@ -2,18 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Movimientoycamara : MonoBehaviour
 {
     public GameObject cam;
     public GameObject campos;
     public float velocidad; 
     public float velRotacion;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
+
+
+    
     // Update is called once per frame
     void Update()
     {
@@ -38,5 +37,7 @@ public class Movimientoycamara : MonoBehaviour
             }
         }
         cam.transform.position = Vector3.Lerp (cam.transform.position, campos.transform.position,0.1f);
+    
+
     }
 }
