@@ -8,11 +8,6 @@ public class PlayerController : MonoBehaviour
 
     public float speed = 10f;
 
-    void Start()
-    {
-        rigidbody = GetComponent<Rigidbody>();
-    }
-
     void Update()
     {
         float hor = Input.GetAxisRaw("Horizontal");

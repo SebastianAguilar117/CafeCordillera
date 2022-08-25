@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        jugador = VidaJugador.vida.transform;
     }
 
     // Update is called once per frame
@@ -38,6 +38,8 @@ public class Enemy : MonoBehaviour
     {
         Gizmos.DrawWireSphere(transform.position, radio);
     }
+
+
     public void OnTriggerStay(Collider Other){
         if(Other.CompareTag ("Player")){
             VidaJugador.vida.vidaActual -= ataque * Time.deltaTime;

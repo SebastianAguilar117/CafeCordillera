@@ -8,8 +8,9 @@ public class VidaJugador : MonoBehaviour
     public float vidaMax;
     public float vidaActual;
     public static VidaJugador vida; 
+    
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         vida = this;
     }
