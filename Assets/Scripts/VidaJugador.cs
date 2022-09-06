@@ -19,8 +19,10 @@ public class VidaJugador : MonoBehaviour
     void Update()
     {
         Barradevida.fillAmount = vidaActual / vidaMax;
-        if(vidaActual <= 0){
+        if(vidaActual <= 0)
+        {
 
         }
     }
+   
 }

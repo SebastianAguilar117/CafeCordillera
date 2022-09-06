@@ -24,4 +24,17 @@ public class Movimiento : MonoBehaviour
             rb.velocity = Vector3.zero;
         }
     }
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.transform.CompareTag("SpiderWeb"))
+        {
+            Debug.Log("Jugador ralentizado");
+            velocidad = 2;
+            Invoke("ClearMovement", 2f);
+        }
+    }
+    private void ClearMovement()
+    {
+        velocidad = 4;
+    }
 }
