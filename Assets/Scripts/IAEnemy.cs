@@ -37,13 +37,31 @@ public class IAEnemy : MonoBehaviour
 
         if (Vector3.Distance(target.position, this.transform.position)<rangoDisparo && (target == jugador))
         {
-            
+            if ((jugador.transform.position - this.transform.position).magnitude <= 1 && (target == jugador))
+            {
+                velCaza = 0f;
+            }
+            else
+            {
+                Invoke("Disparar", 1f);
+                velCaza = 2f;
+            }
 
-            Invoke("Disparar", 1f);
+            
         }
         else 
         {
+
             this.transform.Translate(0, 0, velCaza * Time.deltaTime);
+          
+        }
+        if ((arbol.transform.position - this.transform.position).magnitude <= 1 && (target == arbol))
+        {
+            velCaza = 0f;
+        }
+        else
+        {
+            velCaza = 2f;
         }
     }
 
