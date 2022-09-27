@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class TreeLife : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float vidaMax;
+    public float vidaActual;
+    public GameObject[] objectsDesactivate;
+   
+
     void Start()
     {
         
@@ -13,6 +17,15 @@ public class TreeLife : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+    [ContextMenu("Actualizar Graficos")]
+    public void ActualizarGraficos()
+    {
+        int vidaAuxiliar=Mathf.RoundToInt(vidaActual/vidaMax*(objectsDesactivate.Length-1));
+        for (int i = 0; i < objectsDesactivate.Length; i++)
+        {
+            objectsDesactivate[i].SetActive(i < vidaAuxiliar);
+        }
     }
 }
