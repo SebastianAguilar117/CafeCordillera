@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
-    public GameObject ObjetoSpawneado;
+    public Transform[] puntoSpawn;
+    public GameObject[] enemigos;
     public float TiempoCrearEnemigo;
 
     void Start()
@@ -15,7 +16,9 @@ public class Spawn : MonoBehaviour
 
     public void crearEnemigo ()
     {
-        Instantiate(ObjetoSpawneado, transform.position, transform.rotation);
+        int enemigoRandom = Random.Range(0, enemigos.Length);
+        int randomSpawn = Random.Range(0, puntoSpawn.Length);
+        Instantiate(enemigos[0], puntoSpawn[0].position, transform.rotation);
     }
 
 
