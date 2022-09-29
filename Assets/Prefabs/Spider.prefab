@@ -116,7 +116,7 @@ Transform:
   m_Children:
   - {fileID: 4315457990208240960}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4315457990297173860
 MonoBehaviour:
@@ -340,7 +340,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4399141794512039638}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
@@ -375,7 +375,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4399141794512039638}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1.15
@@ -395,6 +395,10 @@ PrefabInstance:
     - target: {fileID: 5415758615606319104, guid: cea61413eaeb28143bebc7e8cebbf13d, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5415758615606319104, guid: cea61413eaeb28143bebc7e8cebbf13d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5415758615606319105, guid: cea61413eaeb28143bebc7e8cebbf13d, type: 3}
       propertyPath: m_Enabled
@@ -446,7 +450,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5415758615606319229, guid: cea61413eaeb28143bebc7e8cebbf13d, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5415758615606319230, guid: cea61413eaeb28143bebc7e8cebbf13d, type: 3}
       propertyPath: m_Name

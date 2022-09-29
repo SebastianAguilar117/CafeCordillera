@@ -24,7 +24,7 @@ public class Destruir : MonoBehaviour
             Destroy(gameObject);
         }   
     }*/
-    void OnCollisionEnter(Collision other)
+    void OnTriggerEnter(Collision other)
     {
         if (other.gameObject.tag == "CoffeeBullet")
         {
@@ -32,7 +32,7 @@ public class Destruir : MonoBehaviour
             //vida--;
             //transform.position = new Vector3(Random.Range(-9, 9), 0.5f, Random.Range(-9, 9));
              Debug.Log("Le diste");
-            Destroy(gameObject);
+            
             Destroy(other.collider.gameObject);
 
             // Score.puntaje.SumarPuntos();
@@ -41,6 +41,14 @@ public class Destruir : MonoBehaviour
             // {
             //  Destroy(gameObject);
             // }
+        }
+    }
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.transform.CompareTag("CoffeeBullet"))
+        {
+            Debug.Log("Enemigo impactado");
+            Destroy(gameObject);
         }
     }
 }
