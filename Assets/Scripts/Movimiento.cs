@@ -29,7 +29,7 @@ public class Movimiento : MonoBehaviour
         if (collision.transform.CompareTag("SpiderWeb"))
         {
             Debug.Log("Jugador ralentizado");
-            velocidad = 2;
+            velocidad = 1;
             Invoke("ClearMovement", 2f);
         }
     }

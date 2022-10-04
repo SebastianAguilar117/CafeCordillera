@@ -8,6 +8,8 @@ public class IAEnemy : MonoBehaviour
     public Transform arbol;
     public Transform target;
     public DisparoEnemigo disparoEnemigo;
+    public VidaJugador vidaJugadorActual;
+    public TreeLife treeLifeActual;
 
     Vector3 direction;
 
@@ -40,6 +42,7 @@ public class IAEnemy : MonoBehaviour
             if ((jugador.transform.position - this.transform.position).magnitude <= 1 && (target == jugador))
             {
                 velCaza = 0f;
+                AtacarMeleeJugador();
             }
             else
             {
@@ -58,6 +61,7 @@ public class IAEnemy : MonoBehaviour
         if ((arbol.transform.position - this.transform.position).magnitude <= 1 && (target == arbol))
         {
             velCaza = 0f;
+            AtacarMeleeArbol();
         }
         else
         {
@@ -72,6 +76,22 @@ public class IAEnemy : MonoBehaviour
         proximoDisparo = Time.time + tiempoDisparo;
         disparoEnemigo.Disparo();
      }   
+    }
+    private void AtacarMeleeJugador()
+    {
+        if (Time.time > proximoDisparo)
+        {
+            proximoDisparo = Time.time + tiempoDisparo;
+            vidaJugadorActual.vidaActual -= 30;
+        }
+    }
+    private void AtacarMeleeArbol()
+    {
+        if (Time.time > proximoDisparo)
+        {
+            proximoDisparo = Time.time + tiempoDisparo;
+            treeLifeActual.vidaActual -= 10;
+        }
     }
     void OnDrawGizmos()
     {

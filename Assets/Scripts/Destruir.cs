@@ -17,38 +17,15 @@ public class Destruir : MonoBehaviour
     {
         
     }
-    /*void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag== "bullet")
-        {
-            Destroy(gameObject);
-        }   
-    }*/
-    void OnTriggerEnter(Collision other)
-    {
-        if (other.gameObject.tag == "CoffeeBullet")
-        {
-            //Instantiate(explosion, transform.position, transform.rotation);
-            //vida--;
-            //transform.position = new Vector3(Random.Range(-9, 9), 0.5f, Random.Range(-9, 9));
-             Debug.Log("Le diste");
-            
-            Destroy(other.collider.gameObject);
-
-            // Score.puntaje.SumarPuntos();
-
-            // if (vida==0)
-            // {
-            //  Destroy(gameObject);
-            // }
-        }
-    }
+   
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.transform.CompareTag("CoffeeBullet"))
         {
-            Debug.Log("Enemigo impactado");
+            Debug.Log("Enemigo golpeado");
+            Destroy(gameObject);
             Destroy(gameObject);
         }
     }
+
 }

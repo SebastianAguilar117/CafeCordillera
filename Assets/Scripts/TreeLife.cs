@@ -17,7 +17,10 @@ public class TreeLife : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (vidaActual <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
     [ContextMenu("Actualizar Graficos")]
     public void ActualizarGraficos()

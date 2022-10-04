@@ -28,7 +28,6 @@ public class SpiderWeb : MonoBehaviour
         }*/
         if (collision.transform.CompareTag("Player"))
         {
-            Debug.Log("Jugador ralentizado");
             Destroy(gameObject);
         }
     }

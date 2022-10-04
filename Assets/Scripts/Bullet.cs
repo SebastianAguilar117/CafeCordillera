@@ -19,10 +19,10 @@ public class Bullet : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-       /* if (collision.transform.CompareTag("Muro"))
+       if (collision.transform.CompareTag("Enemy"))
         {
           
             Destroy(gameObject);
-        }*/
+        }
     }
 }

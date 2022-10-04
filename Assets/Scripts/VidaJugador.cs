@@ -21,7 +21,7 @@ public class VidaJugador : MonoBehaviour
        // Barradevida.fillAmount = vidaActual / vidaMax;
         if(vidaActual <= 0)
         {
-
+            Destroy(gameObject);
         }
     }
    
