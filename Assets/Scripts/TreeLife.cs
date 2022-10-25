@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TreeLife : MonoBehaviour
 {
     public float vidaMax;
     public float vidaActual;
     public GameObject[] objectsDesactivate;
+    public GameObject GameOver;
    
 
     void Start()
@@ -20,6 +22,8 @@ public class TreeLife : MonoBehaviour
         if (vidaActual <= 0)
         {
             Destroy(gameObject);
+            GameOver.SetActive(true);
+            Time.timeScale = 0;
         }
     }
     [ContextMenu("Actualizar Graficos")]

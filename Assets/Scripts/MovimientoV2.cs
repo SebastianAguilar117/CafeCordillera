@@ -7,6 +7,7 @@ public class MovimientoV2 : MonoBehaviour
     public float speed;
     private Rigidbody playerRb;
     private Vector3 movement;
+    public float velocidad;
 
     void Start()
     {
@@ -59,5 +60,14 @@ public class MovimientoV2 : MonoBehaviour
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90.0f;
         transform.rotation = Quaternion.Euler(new Vector3(0, -angle, 0));
+    }
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.transform.CompareTag("SpiderWeb"))
+        {
+            Debug.Log("Jugador ralentizado");
+            velocidad = 1;
+            Invoke("ClearMovement", 2f);
+        }
     }
 }

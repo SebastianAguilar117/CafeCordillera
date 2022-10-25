@@ -18,6 +18,12 @@ public class IAEnemy : MonoBehaviour
     public float rangoDisparo;
     float tiempoDisparo = 2f;
     float proximoDisparo;
+
+    private void Start()
+    {
+        jugador = GameObject.Find("Player").transform;
+        arbol = GameObject.Find("Rbolito").transform;
+    }
     // Update is called once per frame
     void Update()
     {
