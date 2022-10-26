@@ -18,7 +18,8 @@ public class Spawn : MonoBehaviour
     {
         int enemigoRandom = Random.Range(0, enemigos.Length);
         int randomSpawn = Random.Range(0, puntoSpawn.Length);
-        Instantiate(enemigos[enemigoRandom], puntoSpawn[randomSpawn].position, transform.rotation);
+        GameObject enemigo = Instantiate(enemigos[enemigoRandom], puntoSpawn[randomSpawn].position, transform.rotation);
+        enemigo.GetComponent<IAEnemy>().treeLifeActual = GameObject.Find("Rbolito").GetComponent<TreeLife>();
     }
 
 
