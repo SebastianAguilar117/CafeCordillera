@@ -7,7 +7,8 @@ public class VidaJugador : MonoBehaviour
    // public Image Barradevida; 
     public float vidaMax;
     public float vidaActual;
-    public static VidaJugador vida; 
+    public static VidaJugador vida;
+    public Slider barradevida;
     
     // Start is called before the first frame update
     void Awake()
@@ -23,6 +24,7 @@ public class VidaJugador : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        barradevida.value = vidaActual / vidaMax;
     }
    
 }

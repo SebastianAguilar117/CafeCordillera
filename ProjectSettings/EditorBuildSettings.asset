@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu 1.unity
+    guid: 1df8d18c4fdd09043af6c633a0e116be
+  - enabled: 1
+    path: Assets/Scenes/Yankee.unity
+    guid: 9608186542b4d6244b6ee25cbb2c6310
   m_configObjects: {}

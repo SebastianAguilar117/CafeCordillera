@@ -2,17 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Morion : MonoBehaviour
+public class Camerarotator : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        print ("hola");
-    }
-
+    public float velocidad; 
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Rotate(0, velocidad * Time.deltaTime, 0);
     }
 }

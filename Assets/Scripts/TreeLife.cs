@@ -9,16 +9,22 @@ public class TreeLife : MonoBehaviour
     public float vidaActual;
     public GameObject[] objectsDesactivate;
     public GameObject GameOver;
-   
+    float vidaActualizada;
 
     void Start()
     {
-        
+        vidaActualizada = vidaActual;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (vidaActual!=vidaActualizada)
+        {
+            vidaActualizada = vidaActual;
+            ActualizarGraficos();
+
+        }
         if (vidaActual <= 0)
         {
             Destroy(gameObject);
