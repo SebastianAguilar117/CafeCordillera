@@ -11,9 +11,13 @@ public class TreeLife : MonoBehaviour
     public GameObject GameOver;
     float vidaActualizada;
 
+    public GameObject Hoja;
+
     void Start()
     {
         vidaActualizada = vidaActual;
+
+        Instantiate(Hoja, transform.position, Quaternion.identity);
     }
 
     // Update is called once per frame
@@ -24,6 +28,7 @@ public class TreeLife : MonoBehaviour
             vidaActualizada = vidaActual;
             ActualizarGraficos();
 
+           
         }
         if (vidaActual <= 0)
         {
