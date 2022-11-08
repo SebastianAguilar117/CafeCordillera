@@ -16,7 +16,8 @@ public class TreeLife : MonoBehaviour
 
     public void CrearHojas()
     {
-        Instantiate(Hoja, transform.position, Quaternion.identity);
+        //Instantiate(Hoja, Hoja.transform.position, Quaternion.identity);
+        Hoja.GetComponent<ParticleSystem>().Play(true);
 
     }
     void Start()

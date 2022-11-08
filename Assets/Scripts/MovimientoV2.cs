@@ -8,6 +8,7 @@ public class MovimientoV2 : MonoBehaviour
     private Rigidbody playerRb;
     private Vector3 movement;
     public float velocidad;
+    public Animator animator;
 
     void Start()
     {
@@ -19,14 +20,14 @@ public class MovimientoV2 : MonoBehaviour
     {
         movement = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
-        //  if(movement != new Vector3(0, 0, 0))
-        //  {
-        //      animator.SetBool("itsRunning", true);
-        //  }
-        //  else
-        //  {
-        //      animator.SetBool("itsRunning", false);
-        //  }
+          if(movement != new Vector3(0, 0, 0))
+          {
+              animator.SetBool("itsRunning", true);
+          }
+          else
+          {
+              animator.SetBool("itsRunning", false);
+          }
 
         MoverJugador();
     }

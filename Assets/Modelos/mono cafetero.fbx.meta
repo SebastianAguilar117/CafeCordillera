@@ -30,22 +30,7 @@ ModelImporter:
   - first:
       74: -60597252257525895
     second: Armature|9muerte
-  externalObjects:
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: cara
-    second: {fileID: 2800000, guid: 939254be7a878044684f2bfe16813002, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: delantal
-    second: {fileID: 2800000, guid: 58e1abe16425645498b3d0cc597d1595, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: ropa
-    second: {fileID: 2800000, guid: a3260ee9d8254bb429b019e6bc1995d2, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
