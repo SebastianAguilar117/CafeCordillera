@@ -6714,6 +6714,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -8380157826906577798, guid: 58e66c5c67b9a0a47ae1c6792d371043, type: 3}
   m_PrefabInstance: {fileID: 165949934}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1010654337 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5076668571303785525, guid: ed9cb4f6d4bd7174eb3f19e590231db4, type: 3}
+  m_PrefabInstance: {fileID: 1930410901}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &1010654339
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010654337}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2.21
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1034049826
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7674,7 +7693,8 @@ PrefabInstance:
       propertyPath: barradevida
       value: 
       objectReference: {fileID: 579949875}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3768718643508736779, guid: ed9cb4f6d4bd7174eb3f19e590231db4, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: ed9cb4f6d4bd7174eb3f19e590231db4, type: 3}
 --- !u!1 &1943596324
