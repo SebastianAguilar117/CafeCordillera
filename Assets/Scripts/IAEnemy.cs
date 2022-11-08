@@ -97,6 +97,7 @@ public class IAEnemy : MonoBehaviour
         {
             proximoDisparo = Time.time + tiempoDisparo;
             treeLifeActual.vidaActual -= 5;
+            treeLifeActual.CrearHojas();
         }
     }
     void OnDrawGizmos()
