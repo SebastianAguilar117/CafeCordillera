@@ -4,10 +4,19 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class menu : MonoBehaviour
+
 {
-    // Start is called before the first frame update
+    public GameObject opciones;
     public void PasarDeEscenada()
     {
         SceneManager.LoadScene("Yankee");
+    }
+    public void AbrirOpciones()
+    {
+        opciones.SetActive(true);
+    }
+    public void CerrarOpciones()
+    {
+        opciones.SetActive(false);
     }
 }
