@@ -162,7 +162,7 @@ Transform:
   - {fileID: 7549088972453663987}
   - {fileID: 8019073726390727255}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &7549088972347276314
 Rigidbody:
@@ -192,9 +192,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b6a473ffc562e243972593a8a80d420, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Barradevida: {fileID: 0}
   vidaMax: 100
   vidaActual: 100
+  barradevida: {fileID: 0}
 --- !u!114 &2136669198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,6 +209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidad: 4
   rotacion: 90
+  rb: {fileID: 0}
 --- !u!1 &7549088972453663990
 GameObject:
   m_ObjectHideFlags: 0

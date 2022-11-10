@@ -88,7 +88,7 @@ public class IAEnemy : MonoBehaviour
         if (Time.time > proximoDisparo)
         {
             proximoDisparo = Time.time + tiempoDisparo;
-            VidaJugador.vida.vidaActual -= 30;
+            VidaJugador.vida.vidaActual -= 10;
         }
     }
     private void AtacarMeleeArbol()

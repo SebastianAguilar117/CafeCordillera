@@ -52,4 +52,19 @@ public class TreeLife : MonoBehaviour
             objectsDesactivate[i].SetActive(i < vidaAuxiliar);
         }
     }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        //Debug.Log("entró algo");
+        if (collision.CompareTag("Gas"))
+        {
+            Destroy(collision.gameObject);
+            vidaActual -= 1;
+        }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+       // Debug.Log("toco algo");
+
+    }
 }

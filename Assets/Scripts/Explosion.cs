@@ -2,32 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Destruir : MonoBehaviour
+public class Explosion : MonoBehaviour
 {
-    // int vida =5;
-    //public GameObject explosion;
+    public TreeLife treeLifeActual;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        Destroy(gameObject, 0.5f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
-   
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.transform.CompareTag("CoffeeBullet"))
-        {   
-            Destroy(gameObject);
-        }
-        if (collision.transform.CompareTag("Gas"))
+        if (collision.transform.CompareTag("Player"))
         {
-            Destroy(gameObject);
+            VidaJugador.vida.vidaActual -= 30;
+        }
+        if (collision.transform.CompareTag("Tree"))
+        {
+            treeLifeActual.vidaActual -= 10;
         }
     }
-
 }

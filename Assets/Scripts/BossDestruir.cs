@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Destruir : MonoBehaviour
+public class BossDestruir : MonoBehaviour
 {
-    // int vida =5;
-    //public GameObject explosion;
+    int vida = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,17 +16,23 @@ public class Destruir : MonoBehaviour
     {
         
     }
-   
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.transform.CompareTag("CoffeeBullet"))
-        {   
-            Destroy(gameObject);
+        {
+            vida -= 1;
+            if (vida < 1)
+            {
+                Destroy(gameObject);
+            }
         }
         if (collision.transform.CompareTag("Gas"))
         {
-            Destroy(gameObject);
+            vida -= 1;
+            if(vida<1)
+            {
+                Destroy(gameObject);
+            }
         }
     }
-
 }
